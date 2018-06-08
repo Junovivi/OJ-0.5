@@ -1,0 +1,35 @@
+extends ../template/layout
+block append scripts
+	script(type="text/javascript", src="../js/DIYlist.js")
+block append comment
+	div
+		div
+			include ../template/navbar
+			div.container-fluid
+				div#container-title(style={"text-align": "center"})
+					h2 DIY
+					div
+						div
+							form
+								input.search-input(type="text", placeholder="ID")
+								span.btn
+									input.btn.btn-primary(type="submit", value="Search")
+				div#DIYlist
+					table.table.table-hover(cellspacing='0', cellpadding='0', border='0', style={width:'80%',margin:"0 auto"})
+						thead
+							tr
+								th.col-sm-1
+									span ID
+								th.col-sm-3
+									span Contest Name
+								th.col-sm-1
+									span Start-Time
+								th.col-sm-1
+									span End-Time
+								th.col-sm-1
+									span Status
+								th.col-md-1
+									span Type
+								th.col-sm-1
+									span Author
+						tbody#DIYcontentlist

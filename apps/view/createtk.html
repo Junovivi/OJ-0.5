@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/public/login.js"></script>
+    <script type="text/javascript" src="../js/createtk.js"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">ZhbitOJ</a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="./DIY.html">DIY</a></li>
+                <li><a href="./status.html">Status</a></li>
+                <li><a href="./rank.html">Rank</a></li>
+                <li><a href="./contest.html">Contest</a></li>
+                <li><a href="./discuss.html">Discuss</a></li>
+                <li><a href="./F.A.Q" style="pointer-events:none;">F.A.Q</a></li>
+                <li><a href="./About" style="pointer-events:none;">About</a></li>
+              </ul>
+              <div class="nav navbar-nav navbar-right" id="userinfo">
+                <button class="loginbtn" id="userlogin">Login</button>
+                <button class="loginbtn" id="userregister"><a href="./view/user/register.html">Register</a></button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div id="gray"></div>
+        <div class="popup" id="popup">
+          <div class="top_nav" id="top_nav">
+            <div align="center"><span>登录账号</span><a class="close"></a></div>
+          </div>
+          <div class="min">
+            <div class="loginbtn_login">
+              <div class="content">
+                <form method="post" name="form_login" target="_top">
+                  <div align="center">
+                    <input class="input_yh" id="name" type="text" name="name" required="required" placeholder="用户名" autocomplete="off">
+                    <input class="input_mm" id="pass" type="password" name="pass" required="required" placeholder="密码" autocomplete="off">
+                  </div>
+                  <dd>
+                    <div align="center"><a href="">？遇到登录问题</a></div>
+                  </dd>
+                  <div align="center">
+                    <input class="button" type="button" title="Sign In" value="登录">
+                  </div>
+                </form>
+                <dd>
+                  <div align="center"><a href="#" target="_blank">立即注册</a></div>
+                </dd>
+                <hr align="center">
+                <div align="center">期待更多功能</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <form class="form-horizontal" id="form-des" enctype="multipart/form-data">
+            <div class="form-group form-group-lg">
+              <label class="col-sm-2 control-label" for="title">标题</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="title" type="text">
+              </div>
+              <label id="checktitle" style="color:red;">*</label>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="contest_type">题库性质</label>
+              <div class="col-sm-2">
+                <select class="form-control" id="contest_type">
+                  <option value="DIY">DIY</option>
+                  <option value="STD">STD</option>
+                </select>
+              </div>
+              <label style="color:red;"></label>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="description">题库简介</label>
+              <div class="col-sm-8">
+                <textarea class="form-control" id="description" rows="3"></textarea>
+              </div>
+              <label style="color:red;"></label>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="notice">题库公告</label>
+              <div class="col-sm-8">
+                <textarea class="form-control" id="notice" rows="3"></textarea>
+              </div>
+              <label style="color:red;"></label>
+            </div>
+            <div class="form-group form-inline">
+              <label class="col-sm-2 control-label">持续时间</label>
+              <div class="col-sm-8">
+                <input class="form-control" id="start_time" type="text" placeholder="yyyy-mm-dd hh:mm:ss">
+                <label>-</label>
+                <input class="form-control" id="end_time" type="text" placeholder="yyyy-mm-dd hh:mm:ss">
+              </div>
+              <label id="checktime" style="color:red;"></label>
+            </div>
+            <div class="form-group form-inline">
+              <label class="col-sm-2 control-label">语言</label>
+              <div class="col-sm-2 form-group-lg" style="font-size:1.5em;">
+                <input type="checkbox" value="ALL" name="language" checked>ALL
+                <input type="checkbox" value="C" name="language">C
+                <input type="checkbox" value="C++" name="language">C++
+                <input type="checkbox" value="JAVA" name="language">JAVA
+              </div>
+              <p>（PS:如未选择，则默认全选）</p>
+            </div>
+            <div class="form-group"></div>
+            <label class="col-sm-5"></label>
+            <button class="btn btn-info" id="tk-submit" type="button" disabled>创建</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

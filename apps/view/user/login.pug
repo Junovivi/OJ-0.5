@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title title
+		meta(http-equiv='Content-Type' content='text/html;charset=utf-8')
+		link(rel='stylesheet', href='../css/bootstrap.min.css')
+		link(rel='stylesheet', href='../asserts/css/index.css')
+		srcipt(src='jquery.min.js')
+		srcipt(src='bootstrap.min.js')
+	body
+		a#example(href='#') 登录测试
+		div#LoginBox
+			div.row1 登录
+				a#closeBtn.close_btn(href='javascript:void(0)', title='关闭窗口')
+			div.row
+				span.inputBox
+					input#txtName(type='text', placeholder='用户名')
+				a#warn.warning(href='javascript(0)', title='提示')
+			div.row
+				span.inputBox
+					input#txtPwd(type='password', placeholder='密码')
+				a#warn2.warning(href='javascript(0)', title='提示')
+			div.row
+				a#loginbtn(href='#') 登录
+		

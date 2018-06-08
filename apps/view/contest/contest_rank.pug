@@ -1,0 +1,31 @@
+extends ../../template/layout2.pug
+block append scripts
+	script(type="text/javascript", src="../../js/contest/contest_rank.js")
+block append comment
+	div#container
+		div#navbar.navbar-collapse.collapse(style={"text-align": "center"})
+			ul.nav.navbar-nav(style={"display": "inline-block", "float": "none", "font-size": "1.5em"})
+				li
+					a(href='../index.html') zhbitOJ
+				li
+					a(href='../contest_list.html') Contests
+				li
+					a#c_show Problems
+				li
+					a#c_status Status
+				li
+					a#c_rank RankList
+				li
+					a(href='./contest_list.html') Notice
+				li
+					a(href='../discuss.html') Discuss
+			div#userinfo.nav.navbar-nav.navbar-right
+				button#userlogin.loginbtn Login
+				button#userregister.loginbtn
+					a(href='./view/user/register.html') Register
+		div
+			div(style={"text-align": "center"})
+				h1 RankList
+			div
+				table.table.table-bordered.table-hover#c_ranklist
+		include ../../template/login.pug

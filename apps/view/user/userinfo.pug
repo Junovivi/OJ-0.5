@@ -1,0 +1,27 @@
+extends ../../template/layout
+block append scripts
+	script(type="text/javascript", src="../js/contestlist.js")
+block append comment
+	div
+		div
+			include ../../template/navbar
+			div.container-fluid
+				div#container-title(style={"text-align": "center"})
+					h2 Contest List
+				div#container-main
+					form#form-des.form-horizontal(enctype="multipart/form-data")
+						div.form-group
+							label.col-sm-2.control-label(for="name") 用户名
+							div.col-sm-4
+								input.form-control(type="text", id="name", placeholder="长度在20字符以内，仅限大小写字母，数字，_")
+						div.form-group
+							label.col-sm-2.control-label(for="nickname") 昵称
+							div.col-sm-4
+								input.form-control(type="text", id="nickname", placeholder="长度在20字符以内")
+						div.form-group
+							label.col-sm-2.control-label(for="email") 邮箱
+							div.col-sm-4
+								input.form-control(type="text", id="email", placeholder="请输入有效邮箱")
+						div.form-group
+							label.col-sm-4
+							button#info-sub.btn.btn-info(type="button") 确定

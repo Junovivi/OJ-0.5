@@ -1,0 +1,31 @@
+include ../../template/layout
+	body
+		div
+			div
+				include ../../template/navbar
+				div.container-fluid
+					div#container-title(style={"text-align": "center"})
+						h2 Rank
+						div
+							div
+								form
+									input.search-input(type="text", placeholder="UserName")
+									span.btn
+										input.btn.btn-primary(type="submit", value="Search")
+					div
+						table.table.table-striped(cellspacing='0', cellpadding='0', border='0', style={width:'100%'})
+							thead
+								tr
+									th.col-md-1
+										span Rank
+									th.col-md-3
+										span User
+									th.col-md-5
+										span mood
+									th.col-md-1
+										span AC
+									th.col-md-1
+										span Total
+									th.col-md-1
+										span Rating	
+							tbody#ranklist

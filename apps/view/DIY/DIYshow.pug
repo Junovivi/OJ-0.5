@@ -1,0 +1,21 @@
+extends ../../template/layout2.pug
+block append scripts
+	script(type="text/javascript", src="../js/createtk.js")
+block append comment
+	div#container
+		div.navbar
+		div
+			div
+				h1 Title
+				p Start-Time: 	End-time:
+				p Contest-Status:
+				p Current System Time:
+			div
+				form
+					thead
+						tr
+							th Solved
+							th Problem ID
+							th Title
+							Radio
+					tbody

@@ -1,0 +1,35 @@
+include ../template/layout.pug
+	body
+		div
+			div
+				include ../template/navbar.pug
+				div.container-fluid
+					div#container-title(style={"text-align": "center"})
+						h2 Status
+						div
+							div
+								form
+									input.search-input(type="text", placeholder="Problem ID")
+									span.btn
+										input.btn.btn-primary(type="submit", value="Search")
+					div
+						table.table.table-striped(cellspacing='0', cellpadding='0', border='0', style={width:'100%'})
+							thead
+								tr
+									th.col-md-1
+										span Run ID
+									th.col-md-1
+										span Problem
+									th.col-md-2
+										span User
+									th.col-md-2
+										span Result
+									th.col-md-1
+										span Time
+									th.col-md-2
+										span Memory
+									th.col-md-1
+										span Language
+									th.col-md-2
+										span Submit Time	
+							tbody#statuslist

@@ -1,0 +1,71 @@
+nav.navbar.navbar-fixed-top.navbar-default(role='navigation')
+	div.container
+		div.navbar-header
+			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false',aria-controls='navbar')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand(href='./index.html') ZhbitOJ
+		div#navbar.navbar-collapse.collapse(style={"text-align":"center"})
+			ul.nav.navbar-nav
+				li
+					a(href='./DIY_list.html', style={"pointer-events": "none"}) DIY
+				li
+					a(href='./status.html') Status
+				li
+					a(href='./rank.html') Rank
+				li
+					a(href='./contest_list.html') Contest
+				li
+					a(href='./discuss.html') Discuss
+				li
+					a(href='./F.A.Q', style={"pointer-events": "none"}) F.A.Q
+				li
+					a(href='./About', style={"pointer-events": "none"}) About
+			ul.nav.navbar-nav.navbar-right
+				div#userinfo
+					button#userlogin.loginbtn Login
+					button#userregister.loginbtn
+						a(href='../view/user/register.html') Register
+				div#userinfo1
+					li
+						a Hello
+					li.dropdown
+						a#info-name.dropdown-toggle(href='', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+						ul.dropdown-menu
+							li
+								a(href='') modify personal information
+							li
+								a(href='') Logout
+div#gray
+div#popup.popup
+	div.top_nav#top_nav
+		div(align="center")
+			span 登录账号
+			a.close(style={"font-size": "50px"}) ×
+	div.min
+		div.loginbtn_login
+			div.content
+				form#form_login.form-horizontal(name="form_login", target="_top")
+					div.form-group.form-inline
+						label.col-sm-3.control-label(for="name") 用户名
+						input#name.col-sm-8.input-lg.input_yh.form-control(type="text", name="name", required="required", autocomplete="off")
+					div.form-group.form-inline
+						label.col-sm-3.control-label(for="passwd") 密码
+						input#passwd.col-sm-8.input-lg.input_mm.form-control(type="password", name="pass", required="required", autocomplete="off")
+					div.form-group
+						div.col-sm-offset-3.col-sm-10
+							div.checkbox
+								input(type="checkbox")
+								| 记住密码
+					div.form-group
+						label.col-sm-offset-8
+							a(href="") 遇到登录问题
+					div.form-group.form-inline
+						div.col-sm-offset-3.col-sm-2
+							button#login_submit.btn.btn-default(type="button" disabled) 登录
+						div.col-sm-offset-7
+							button.btn.btn-default(type="button") 立即注册
+					hr(align="center")
+					div#info(align="center") 期待更多功能

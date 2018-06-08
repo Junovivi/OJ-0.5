@@ -1,0 +1,38 @@
+//
+   Created by Think on 2017/12/30.
+include ../../template/layout2
+    body
+        div(style={padding:"5px"})
+            label.col-sm-2.control-label
+            h1 注册账号
+            hr
+        div
+            form#form-des.form-horizontal(enctype="multipart/form-data")
+                div.form-group
+                    label.col-sm-2.control-label(for="name") 用户名
+                    div.col-sm-4
+                        input.form-control(type="text", id="name", placeholder="长度在0-40字符以内，仅限大小写字母，数字，_")
+                div.form-group
+                    label.col-sm-2.control-label(for="nickname") 昵称
+                    div.col-sm-4
+                        input.form-control(type="text", id="nickname", placeholder="长度在0-40字符以内")
+                div.form-group
+                    label.col-sm-2.control-label(for="passwd") 密码
+                    div.col-sm-4
+                        input.form-control(type="text", id="passwd", placeholder="请输入密码")
+                div.form-group
+                    label.col-sm-2.control-label(for="passwd2") 再次输入密码
+                    div.col-sm-4
+                        input.form-control(type="text", id="passwd2", placeholder="请再次输入密码")
+                div.form-group
+                    label.col-sm-2.control-label(for="email") 邮箱
+                    div.col-sm-4
+                        input.form-control(type="email", id="email", placeholder="请输入合法邮箱")
+                div.checkbox
+                    label.col-sm-2.control-label
+                    label.col-sm-4
+                        input(type="checkbox", id="isAgree")
+                        |接受我是你的爸爸:)
+                div.form-group
+                    label.col-sm-4
+                    button#regsubmit.btn.btn-info(type="button") 立即注册

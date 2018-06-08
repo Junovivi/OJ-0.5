@@ -1,0 +1,53 @@
+extends ../template/layout.pug
+block append scripts
+	script(type="text/javascript", src="../js/createtk.js")
+block append comment
+	div
+		div
+			include ../template/navbar.pug
+			div.container-fluid
+				form#form-des.form-horizontal(enctype="multipart/form-data")
+					div.form-group.form-group-lg
+						label.col-sm-2.control-label(for="title") 标题
+						div.col-sm-6
+							input#title.form-control(type="text")
+						label#checktitle(style="color:red") *
+					div.form-group
+						label.col-sm-2.control-label(for="contest_type") 题库性质
+						div.col-sm-2
+							select#contest_type.form-control
+								option(value="DIY") DIY
+								option(value="STD") STD
+						label(style="color:red")
+					div.form-group
+						label.col-sm-2.control-label(for="description") 题库简介
+						div.col-sm-8
+							textarea#description.form-control(rows="3")
+						label(style="color:red")
+					div.form-group
+						label.col-sm-2.control-label(for="notice") 题库公告
+						div.col-sm-8
+							textarea#notice.form-control(rows="3")
+						label(style="color:red")
+					div.form-group.form-inline
+						label.col-sm-2.control-label 持续时间
+						div.col-sm-8
+							input#start_time.form-control(type="text", placeholder="yyyy-mm-dd hh:mm:ss")
+							label -
+							input#end_time.form-control(type="text", placeholder="yyyy-mm-dd hh:mm:ss")
+						label#checktime(style="color:red")
+					div.form-group.form-inline
+						label.col-sm-2.control-label 语言
+						div.col-sm-2.form-group-lg(style="font-size:1.5em;")
+							input(type="checkbox", value="ALL", name="language", checked)
+							| ALL
+							input(type="checkbox", value="C", name="language")
+							| C
+							input(type="checkbox", value="C++", name="language")
+							| C++
+							input(type="checkbox", value="JAVA", name="language")
+							| JAVA
+						p （PS:如未选择，则默认全选）
+					div.form-group
+					label.col-sm-5
+					button#tk-submit.btn.btn-info(type="button", disabled) 创建

@@ -1,0 +1,33 @@
+extends ../../template/layout2.pug
+block append comment
+	div
+		div
+			include ../../template/navbar
+			div.container-fluid
+				div#container-title(style={"text-align": "center"})
+					h2 Contest
+					div
+						div
+							form
+								input.search-input(type="text", placeholder="Contest ID")
+								span.btn
+									input.btn.btn-primary(type="submit", value="Search")
+				div
+					table.table.table-striped(cellspacing="0", cellpadding="0", border="0", style={width:"100%"})
+						thead
+							tr
+								th
+									span Problem
+								th
+									span Author
+								th
+									span Result
+								th
+									span Time
+								th
+									span Memory
+								th
+									span Language
+								th
+									span Submit Time
+						tbody#contestlist

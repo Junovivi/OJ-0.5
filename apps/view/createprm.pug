@@ -1,0 +1,63 @@
+include ../template/layout
+	body
+		div
+			div
+				include ../template/navbar
+				div.container-fluid
+					form#form-des.form-horizontal(enctype="multipart/form-data")
+						div.form-group
+							label.col-sm-2.control-label(for="prmauthor") 作者
+							div.col-sm-8
+								input.form-control(type="text", id="prmauthor")
+						div.form-group
+							label.col-sm-2.control-label(for="prmsource") 来源
+							div.col-sm-8
+								input.form-control(type="text", id="prmsource")
+						div.form-group.form-group-lg
+							label.col-sm-2.control-label(for="prmtitle") 标题
+							div.col-sm-8
+								input.form-control(type="text", id="prmtitle")
+							label(style="color:red") *
+						div.form-group
+							label.col-sm-2.control-label(for="prmdes") 描述
+							div.col-sm-8
+								textarea.form-control(rows="5", id="prmdes")
+							label(style="color:red") *
+						div.form-group
+							label.col-sm-2.control-label(for="prminput") 输入
+							div.col-sm-8
+								textarea.form-control(rows="5", id="prminput")
+							label(style="color:red") *
+						div.form-group
+							label.col-sm-2.control-label(for="prmoutput") 输出
+							div.col-sm-8
+								textarea.form-control(rows="5", id="prmoutput")
+							label(style="color:red") *
+						div.form-group
+							label.col-sm-2.control-label(for="prmspinput") 样例输入
+							div.col-sm-8
+								textarea.form-control(rows="5", id="prmspinput")
+							label(style="color:red") *
+						div.form-group
+							label.col-sm-2.control-label(for="prmspoutput") 样例输出
+							div.col-sm-8
+								textarea.form-control(rows="5", id="prmspoutput")
+							label(style="color:red") *
+						div.form-group
+							label.col-sm-2.control-label(for="hint") 提示
+							div.col-sm-8
+								textarea.form-control(rows="5", id="hint")
+							label(style="color:red") *
+						div.form-group.form-group-lg
+							label.col-sm-2.control-label(for="prmzipfile") 添加数据
+							div.col-sm-8
+								input#prmzipfile(type="file", multiple="true")
+								p.help-block 添加数据
+						div.checkbox
+							label.col-sm-2.control-label
+							label.col-sm-4
+								input(type="checkbox", id="isPublic")
+								| 是否能被他人引用
+					div.form-group
+						label.col-sm-5
+						button#prm-submit.btn.btn-info(type="button") 提交

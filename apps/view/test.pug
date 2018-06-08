@@ -1,0 +1,22 @@
+include ../template/layout.pug
+	body
+		div
+			include ../template/navbar.pug
+			div.container-fluid
+				div#container-title(style={"text-align": "center"})
+					h2 DIY
+					div
+						form
+							input.search-input(type="text", placeholder="ID")
+							span.btn
+								input.btn.btn-primary(type="submit", value="Search")
+				div#prmlist
+					table.table.table-hover(cellspacing='0', cellpadding='0', border='0', style={width:'60%',margin:"0 auto"})
+						thead
+							tr
+//script
+//|-var diys = ["problem ID", "Title", "Radio"]
+//|each diy in diys
+//|	th.col-sm-1
+//|		span #{diy}
+//						tbody#prmlist

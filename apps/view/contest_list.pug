@@ -1,0 +1,48 @@
+extends ../template/layout
+block append scripts
+	script(type="text/javascript", src="../js/contestlist.js")
+block append comment
+	div
+		div
+			include ../template/navbar
+			div.container-fluid
+				div#container-title(style={"text-align": "center"})
+					h2 Contest List
+					div
+						div
+							form.form-inline
+								input#s_title.search-input(type="text", placeholder="比赛标题")
+								select#s_contest_status.form-control
+									option(value="") All
+									option(value="Running") Running
+									option(value="Pending") Pending
+									option(value="Ending") Ending
+								select#s_security_type.form-control
+									option(value="") Type
+									option(value="public") public
+									option(value="password") password
+									option(value="private") private
+								input#s_author.search-input(type="text", placeholder="作者")
+								span.btn
+									input#search.btn.btn-primary(type="button", value="Search")
+								span.btn
+									input#create.btn.btn-success(type="button", value="Create")
+				div#contestlist
+					table.table.table-hover(cellspacing='0', cellpadding='0', border='0', style={width: '100%', margin: "0 auto"})
+						thead
+							tr
+								th.col-sm-1
+									span ID
+								th.col-sm-3
+									span Contest Name
+								th.col-sm-2
+									span Start-Time
+								th.col-sm-2
+									span End-Time
+								th.col-sm-1
+									span Status
+								th.col-md-1
+									span Type
+								th.col-sm-2
+									span Register Contest
+						tbody#contestcontentlist

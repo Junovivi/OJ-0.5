@@ -1,0 +1,27 @@
+include ../template/layout
+	body
+		div
+			div
+				include ../template/navbar
+				div.container-fluid(style={"margin-top":"80px",padding:"0 2%"})
+					div#container-title(style={"text-align":"center"})
+						h2 Discuss
+						div
+							div
+								form
+									input.search-input(type="text", placeholder="Problem ID")
+									span.btn
+										input.btn.btn-primary(type="submit", value="Search")
+					div
+						table.table.table-striped(cellspaing="0", cellpadding="0", border="0", style={width:"100%"})
+							thead
+								tr
+									th
+										span ID
+									th
+										span Problem
+									th
+										span Title
+									th
+										span Author
+							tbody#prmlist
